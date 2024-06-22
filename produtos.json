@@ -1,0 +1,28 @@
+{
+
+
+    "products":[
+        {
+        "name": "Camisa masculina",
+        "description": "100% algodão, plus size",
+        "price": "50",
+        "disponibility" : "sim"
+        },
+
+        {
+            "name": "Camisa feminina",
+            "description": "100% algodão, plus size",
+            "price": "42",
+            "disponibility" : "sim"
+        },
+
+        {
+            "name": "Casaco masculina",
+            "description": "100% algodão, plus size",
+            "price": "130",
+            "disponibility" : "sim"
+        }
+
+
+    ]
+}    

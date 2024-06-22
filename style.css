@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #218D8F;
+    color:aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    min-height: 60px;
+    
+}
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    margin: 1rem;
+    min-width: 60%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Open sans,sans sans-serif;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .geralInput{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+
+  
+#btn {
+  color:  #f8f8f8; 
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #218D8F; 
+  color: white; 
+}
+
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#listSection{
+    font-family: Open sans,sans sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 60%;
+    margin: 1rem auto; 
+    border-collapse: collapse; 
+  }
+  
+  th, td {
+    
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    text-align: left; 
+  }
+  
+  th {
+    /* Topo das celulas */
+    font-weight: bold; 
+    background-color: #218D8F;
+    color: #f8f8f8;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f8f8f8;
+  }
+  
+  table * {
+    font-size: 18px; 
+  }
+
+  

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<header>
+    <h1>Cadastro de produtos</h1>
+    
+</header>
+
+<main>
+    <section>
+        <form id="productForm">
+            <label for="name">Nome do Produto:</label>
+            <input class="geralInput" name="productName" id="name">
+
+            <label for="description">Descrição do Produto:</label>
+            <textarea class="geralInput" id="description" name="description" rows="5" cols="30" required></textarea>
+
+            <label for="price">Valor do Produto:</label>
+            <input class="geralInput" type="number" id="price" name="price" step="0.01" required>
+
+            <label class="geralInput" for="disponibility">Disponível para Venda:</label>
+
+        <select class="geralInput" id="disponibility" name="disponibility" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <button id='btn'type="subimit">Adicionar Produto</button>
+
+        </form>
+    </section>
+
+    <section id="listSection">
+        <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+              </tbody>
+          </table>
+    </section>
+
+   
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
