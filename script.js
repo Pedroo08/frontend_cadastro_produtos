@@ -1,11 +1,19 @@
 const products = [];
 
+//forms tags
 const form = document.getElementById('productForm');
 const nameInput = document.getElementById('name');
 const descriptionInput = document.getElementById('description');
 const priceInput = document.getElementById('price');
 const disponibilityInput  = document.getElementById('disponibility');
-const productTable = document.querySelector('table tbody'); // Get the table body
+
+////lista tabela
+const productTable = document.querySelector('table tbody'); 
+
+//Popups tags
+const popup = document.getElementById('popup');
+const openPopupBtn = document.getElementById('openPopup');
+const closePopupBtn = document.getElementById('closePopup');
 
 
 //Ler o Json e adicona a tabela 
@@ -40,12 +48,13 @@ form.addEventListener('submit', function(event) {
   };
 
   products.push(newProduct);
-  Replace();
   form.reset();
+  Replace();
+  console.log(products)
     
 });
 
-//Recolca os produtos na tabela na ordem
+//Realoca os produtos na tabela na ordem
 function Replace(){
   const productTable = document.querySelector('table tbody');
   productTable.innerHTML = '';
@@ -53,7 +62,7 @@ function Replace(){
   products.map((product)=> addTable(product))
 }
 
-//ordena a o array do menor para maior preço
+//ordena a o array 
 function sort(listProducts){
   listProducts.sort((a, b) => a.price - b.price);
 }
@@ -76,3 +85,21 @@ function addTable(product){
     productTable.appendChild(tableRow);
   }
 }
+
+//Ativando e destivando o popup
+document.addEventListener('DOMContentLoaded', () => {
+
+  openPopupBtn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+  });
+
+  closePopupBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target === popup) {
+          popup.style.display = 'none';
+      }
+  });
+});

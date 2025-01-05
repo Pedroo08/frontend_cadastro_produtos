@@ -7,38 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-
 <header>
     <h1>Cadastro de produtos</h1>
-    
 </header>
 
 <main>
-    <section>
-        <form id="productForm">
-            <label for="name">Nome do Produto:</label>
-            <input class="geralInput" name="productName" id="name">
+    
+    <section class="pop" id="popup">
+        <div class="popup-content">
+            <button class="close-popup" id="closePopup">&times;</button>
+            <form id="productForm">
+                <label for="name">Nome do Produto:</label>
+                <input class="geralInput" name="productName" id="name" required>
 
-            <label for="description">Descrição do Produto:</label>
-            <textarea class="geralInput" id="description" name="description" rows="5" cols="30" required></textarea>
+                <label for="description">Descrição do Produto:</label>
+                <textarea class="geralInput" id="description" name="description" rows="5" cols="30" required></textarea>
 
-            <label for="price">Valor do Produto:</label>
-            <input class="geralInput" type="number" id="price" name="price" step="0.01" required>
+                <label for="price">Valor do Produto:</label>
+                <input class="geralInput" type="number" id="price" name="price" step="0.01" required>
 
-            <label class="geralInput" for="disponibility">Disponível para Venda:</label>
+                <label for="disponibility">Disponível para Venda:</label>
+                <select class="geralInput" id="disponibility" name="disponibility" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
 
-        <select class="geralInput" id="disponibility" name="disponibility" required>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-        </select>
-
-        <button id='btn'type="subimit">Adicionar Produto</button>
-
-        </form>
+                <button class="btn" type="submit">Adicionar Produto</button>
+            </form>
+        </div>
     </section>
 
     <section id="listSection">
+        <button class='btn' id="openPopup" type="button">Cadastrar Produto</a></button>
         <table>
             <thead>
               <tr>
@@ -47,11 +47,9 @@
               </tr>
             </thead>
             <tbody>
-              </tbody>
-          </table>
+            </tbody>
+        </table>
     </section>
-
-   
 </main>
 
 <script src="script.js"></script>

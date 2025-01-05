@@ -4,6 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+
 }
 
 header{
@@ -19,12 +22,48 @@ header{
     
 }
 
-  form {
+  /* Estilos para o pop-up */
+  .pop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+form {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    width: 300px; 
+    width: 100%; 
     margin: 1rem;
     min-width: 60%;
     max-width: 80%;
@@ -50,7 +89,7 @@ header{
   }
 
   
-#btn {
+.btn {
   color:  #f8f8f8; 
   background-color: #0A874B;
   padding: 10px 20px;
@@ -60,17 +99,14 @@ header{
   transition: background-color 0.3s ease;
 }
 
-#btn:hover {
-  background-color: #218D8F; 
-  color: white; 
+.btn > a{
+  color: #fff;
 }
 
 
-section{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
+.btn:hover {
+  background-color: #218D8F; 
+  color: white; 
 }
 
 #listSection{
@@ -78,6 +114,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
 }
 
 table {
@@ -107,5 +145,9 @@ table {
   table * {
     font-size: 18px; 
   }
+
+
+
+
 
   
